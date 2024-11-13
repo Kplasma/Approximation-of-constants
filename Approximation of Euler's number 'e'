@@ -1,0 +1,13 @@
+#This code shows how we can approximate Euler's number using the taylor series of e^x function at x=1 
+from math import e 
+dict={0:1,1:1} # create a dictionary to add values of calculated factorial while doing recursion 
+def factorial(x):
+	if x in dict:
+		return dict[x] #base case
+	else :
+		return x*factorial(x-1) 
+euler_number=0# intitialization 
+for i in range(0,100):
+			euler_number+= 1/factorial(i)
+print(f' e from math ={e}') #prints the euler number as there in math module 			
+print(f' e from loop ={euler_number}') #prints euler number as what we calculated 			
