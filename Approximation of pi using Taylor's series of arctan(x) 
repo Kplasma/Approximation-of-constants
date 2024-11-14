@@ -1,0 +1,14 @@
+#using Taylor's series of arctan(x) at x=1 
+# as arctan(1) =π/4 , if we compute the taylor series of arctan at x= 1 and then multiply the sum by 4,we should theoretically get a good approximation for π 
+
+from math import pi	
+ 
+tot =0# initialising 
+x=10000# number of terms of series 
+# for loop iterating through the range from 0 to x-1
+for i in range(0,x):
+	tot+= (-1)**i/(2*i +1) # it adds the term to the sum 
+
+print(f' pi = {pi}') # pi imported from math module 	
+print(f' pi using the series ={tot*4} ') #approximate value of pi
+		
